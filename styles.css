@@ -349,22 +349,3 @@ input[type="checkbox"].toggle:disabled+label::after {
 .margin {
     margin: 3rem;
 }
-
-
-/*Light/dark mode*/
-
-
-:root{
-    --primary-color: white;
-    --secondary-color: rgb(48, 47, 47);
-}
-
-.dark-theme {
-    --primary-color: rgb(48, 47, 47);
-    --secondary-color: white;
-}
-
-.light-theme {
-    --primary-color: white;
-    --secondary-color:rgb(48, 47, 47);
-}
