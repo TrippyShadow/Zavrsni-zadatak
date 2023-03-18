@@ -357,13 +357,6 @@ section {
     margin: 3rem;
 }
 
-@media screen and (width: 600px) {
-    body {
-        font-size: 0.5rem;
-    }
-}
-
-
 /*Light/dark mode*/
 
 
