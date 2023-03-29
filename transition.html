@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav class="sticky">
+        <i style="font-size:24px" id="settings" class="fa"><a href="settings.html">&#xf013;</a></i>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Tutorials</a></li>
+        </ul>
+      </nav>
+
+    <h1 class="main capital">CSS animation and transition tutorials</h1>
+
+  <div class="hover bottom-line">
+    <p class="description center">Hover text below for little surprise!</p>
+    <div class="center">
+      <button class="zoom button-style">Hover me :)</button>
+    </div>
+  </div>
+
+  <h3 class="hyperlink-title">Today you will learn:</h3>
+
+  <ol class="hyperlink-list">
+    <li><a href="#Transition">What is transition?</a></li>
+    <li><a href="#Transition-examples">How can you use it?</a></li>
+    <li><a href="#Transition-properties">Transition properties</a></li>
+  </ol>
+
+  <section>
+    <article class="transition">
+      <h2 id="Transition" class="margin-title capital">What is transition?</h2>
+      <p class="margin"><code>CSS transitions</code> provide a way to control animation speed when changing CSS
+        properties.
+        Instead of having
+        property changes take effect immediately, you can cause the changes in a property to take place over a period of
+        time. For example, if you change the color of an element from white to black, usually the change is
+        instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve.
+      </p>
+      <button class="hover-button border-radius button-style">HOVER</button>
+      <button class="hover-button background-color button-style">HOVER</button>
+    </article>
+
+    <article>
+      <h2 id="Transition-examples" class="margin-title capital">How can you use CSS transitions?</h2>
+      <p class="margin">To use CSS transitions, you must specify two things: the CSS property you want to add an effect
+        to and the
+        duration of the effect. If the duration part is not specified, the transition will have no effect because its
+        default value is 0.
+
+        Here's an example that shows a `div` element with a transition on its `width` property:
+      </p>
+
+      <article class="bottom-line">
+
+        <img src="pictures/transition-example.png" alt="Transition Example" class="transition-example">
+        <p>Example:</p>
+        <button class="example">Hover me</button>
+
+        <p>
+          This code specifies that when a user hovers over the `div` element, its `width` property will transition from
+          `100px` to `300px` over a period of `2s` (2 seconds).</p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-properties" class="capital">Transition properties</h2>
+      <p class="bottom-line"></p>
+    </article>
+  </section>
+</body>
+</html>
