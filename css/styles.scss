@@ -1,3 +1,5 @@
+/*Page style*/
+
 body {
     background-color: var(--primary-color);
     margin: 0;
@@ -10,6 +12,10 @@ body {
     border: none;
     font-size: 1.4rem;
     scroll-behavior: smooth;
+}
+
+.drop-shadow {
+    filter: drop-shadow(0 0 .2rem #111);
 }
 
 .button-style {
@@ -26,46 +32,6 @@ body {
 
 .hover {
     height: 15rem;
-}
-
-nav {
-    background-image: linear-gradient(#306283, #9aaae0);
-    min-width: fit-content;
-    overflow: hidden;
-    z-index: 1;
-    box-shadow: 0 0 0.5rem #306283;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    border: none;
-}
-
-ul li {
-    display: inline-block;
-    border: none;
-}
-
-ul li a {
-    border: none;
-    color: #dadfc7;
-    display: block;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.1rem;
-    transition: all 0.3s ease-in-out;
-}
-
-ul li a:hover {
-    background-color: #4580b1;
-    color: #ffffff;
-    box-shadow: 0 0 2rem #44647e;
 }
 
 .center {
@@ -91,6 +57,65 @@ ul li a:hover {
 
 .list-number {
     font-weight: bold;
+}
+
+.titles {
+    border: 1px solid black;
+    background-color: #4478a3;
+}
+
+img {
+    width: 30rem;
+    margin: 1rem auto;
+}
+
+.title {
+    display: block;
+    width: 20%;
+    margin-bottom: 12rem;
+}
+
+
+/*Navbar*/
+
+
+nav {
+    background-image: linear-gradient(#306283, #9aaae0);
+    min-width: fit-content;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 0.5rem #306283;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        border: none;
+
+        li {
+            display: inline-block;
+            border: none;
+
+            a {
+                border: none;
+                color: #dadfc7;
+                display: block;
+                padding: 10px;
+                text-align: center;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1.1rem;
+                transition: all 0.3s ease-in-out;
+            }
+
+            a:hover {
+                background-color: #4580b1;
+                color: #ffffff;
+                filter: drop-shadow(0 0 1rem #111);
+            }
+        }
+    }
 }
 
 code {
@@ -137,6 +162,10 @@ code {
     width: 100%;
 }
 
+
+/*Settings button*/
+
+
 #settings {
     color: white;
     height: center;
@@ -155,26 +184,6 @@ code {
     text-decoration: none;
     color: var(--primary-color);
 }
-
-
-.titles {
-    border: 1px solid black;
-    background-color: #4478a3;
-}
-
-img {
-    width: 30rem;
-    margin: 1rem auto;
-}
-
-.title {
-    display: block;
-    width: 20%;
-    margin-bottom: 12rem;
-}
-
-
-
 
 
 /*Checkbox*/
@@ -348,4 +357,80 @@ input[type="checkbox"].toggle:disabled+label::after {
 
 .margin {
     margin: 3rem;
+}
+
+.tutorial-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    list-style: none;
+    background-color: var(--linear-gradient-clr1);
+
+    a {
+        text-decoration: none;
+        color: #dadfc7;
+        padding: .5rem;
+    }
+
+    a:hover {
+        background-color: #dadfc7;
+        color: var(--linear-gradient-clr1);
+    }
+}
+
+/*@media query*/
+
+@media screen and (max-width: 1000px) {
+    .examples {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 720px) {
+
+    body {
+        font-size: medium;
+    }
+
+    code {
+        font-size: large;
+    }
+
+    .examples {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    nav {
+        display: none;
+    }
+}
+
+/*Light/dark mode*/
+
+.container {
+    padding: 22rem 0 2rem;
+    margin: 2rem 5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    width: 100%;
+    align-content: center;
+    margin: -17em 900px;
+}
+
+:root {
+    --primary-color: white;
+    --secondary-color: rgb(48, 47, 47);
+}
+
+.dark-theme {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.light-theme {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
 }

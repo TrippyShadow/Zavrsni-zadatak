@@ -1,0 +1,410 @@
+/*Page style*/
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+  color: #1c3f58;
+  padding: 0;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  border: none;
+  font-size: 1.4rem;
+  scroll-behavior: smooth;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 0.2rem #111);
+}
+
+.button-style {
+  background-image: linear-gradient(#306283, #9aaae0);
+  color: #dadfc7;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+.capital {
+  text-transform: capitalize;
+}
+
+.hover {
+  height: 15rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  padding: 22rem 0 2rem;
+  margin: 2rem 5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.main {
+  text-align: center;
+  margin: 3rem 5rem;
+  padding: 6rem 0;
+}
+
+.transition {
+  padding-bottom: 2rem;
+}
+
+.list-number {
+  font-weight: bold;
+}
+
+.titles {
+  border: 1px solid black;
+  background-color: #4478a3;
+}
+
+img {
+  width: 30rem;
+  margin: 1rem auto;
+}
+
+.title {
+  display: block;
+  width: 20%;
+  margin-bottom: 12rem;
+}
+
+/*Navbar*/
+nav {
+  background-image: linear-gradient(#306283, #9aaae0);
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 0 0.5rem #306283;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: none;
+}
+nav ul li {
+  display: inline-block;
+  border: none;
+}
+nav ul li a {
+  border: none;
+  color: #dadfc7;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+nav ul li a:hover {
+  background-color: #4580b1;
+  color: #ffffff;
+  filter: drop-shadow(0 0 1rem #111);
+}
+
+code {
+  background-image: linear-gradient(#306283, #8497d6);
+  border-radius: 3px;
+  padding: 0.1rem;
+  margin: 0.2rem;
+  color: #dadfc7;
+  font-size: 1.4rem;
+}
+
+.bottom-line {
+  border-bottom: 1px solid #306283;
+  width: 70%;
+  margin: 0 auto 7.6rem;
+  padding: 0 0 4.5rem;
+}
+
+.zoom {
+  margin: 3rem auto;
+  padding: 0.2rem;
+  transition: transform 1s;
+  width: 7rem;
+  height: 7rem;
+}
+
+.zoom:hover {
+  transform: scale(2);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/*Settings button*/
+#settings {
+  color: white;
+  height: center;
+  float: right;
+  margin-top: 0.3em;
+  margin-right: 50px;
+}
+
+#settings:hover {
+  cursor: pointer;
+  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+}
+
+#settings a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+/*Checkbox*/
+input[type=checkbox].toggle {
+  opacity: 0;
+  position: absolute;
+  left: -9000 px;
+  top: -9000px;
+}
+
+input[type=checkbox].toggle + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type=checkbox].toggle + label::before {
+  content: "";
+  width: 2em;
+  height: 1em;
+  background-color: hsl(0, 80%, 90%);
+  border-radius: 1em;
+  margin-right: 0.25em;
+  transition: background-color 200ms ease-in-out;
+}
+
+input[type=checkbox].toggle + label::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  content: "";
+  font-size: 0.5em;
+  height: 0.9em;
+  left: 0.2em;
+  width: 1.8em;
+  height: 1.8em;
+  background-color: hsl(0, 0%, 44%);
+  color: var(--primary-color);
+  border-radius: 1em;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+}
+
+input[type=checkbox].toggle:checked + label::before {
+  background-color: hsl(199, 32%, 71%);
+}
+
+input[type=checkbox].toggle:checked + label::after {
+  content: "";
+  transform: translateX(100%);
+  background-color: hsl(212, 58%, 59%);
+}
+
+input[type=checkbox].toggle:disabled + label {
+  color: #ffe9e9;
+}
+
+input[type=checkbox].toggle:disabled + label::before {
+  background-color: #CCC;
+}
+
+input[type=checkbox].toggle:disabled + label::after {
+  background-color: #777;
+}
+
+#check1 {
+  margin: 0 0px;
+}
+
+.container {
+  width: 100%;
+  align-content: center;
+  margin: -17em 900px;
+}
+
+#darkmode {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-content: center;
+}
+
+.hyperlink-list {
+  margin: auto 3.5rem;
+}
+
+.hyperlink-list a {
+  text-decoration: none;
+  color: #1c3f55;
+  position: relative;
+}
+
+.hyperlink-list a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #1c3f55;
+  transform-origin: bottom left;
+  transition: transform 0.3s ease-out;
+}
+
+.hyperlink-list a:hover::after {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+
+.hyperlink-title {
+  margin: 1rem 3.5rem;
+}
+
+.margin-title {
+  margin: 2.5rem;
+  margin-top: 4.5rem;
+}
+
+.transition-example {
+  width: 24rem;
+  margin: 4rem 4rem 4rem 5rem;
+  display: block;
+}
+
+.example {
+  text-align: center;
+  background-color: #306283;
+  text-decoration: none;
+  color: #dadfc7;
+  width: 100px;
+  height: 100px;
+  transition: width 2s;
+  display: block;
+  margin: 4rem 0;
+}
+
+.example:hover {
+  width: 300px;
+}
+
+.hover-button {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 4rem 2rem 4rem 25rem;
+}
+
+.hover-button:hover {
+  width: 100px;
+  height: 100px;
+}
+
+.border-radius {
+  transition: border-radius 0.4s;
+}
+
+.border-radius:hover {
+  border-radius: 50%;
+}
+
+.background-color {
+  transition: background-image 0.4s;
+}
+
+.background-color:hover {
+  background-image: linear-gradient(#dadfc7, #9aaae0);
+  color: #1c3f55;
+}
+
+.margin {
+  margin: 3rem;
+}
+
+.tutorial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  list-style: none;
+  background-color: var(--linear-gradient-clr1);
+}
+.tutorial-list a {
+  text-decoration: none;
+  color: #dadfc7;
+  padding: 0.5rem;
+}
+.tutorial-list a:hover {
+  background-color: #dadfc7;
+  color: var(--linear-gradient-clr1);
+}
+
+/*@media query*/
+@media screen and (max-width: 1000px) {
+  .examples {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+  code {
+    font-size: large;
+  }
+  .examples {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+@media screen and (max-width: 420px) {
+  nav {
+    display: none;
+  }
+}
+/*Light/dark mode*/
+.container {
+  padding: 22rem 0 2rem;
+  margin: 2rem 5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 100%;
+  align-content: center;
+  margin: -17em 900px;
+}
+
+:root {
+  --primary-color: white;
+  --secondary-color: rgb(48, 47, 47);
+}
+
+.dark-theme {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.light-theme {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}/*# sourceMappingURL=styles.css.map */
