@@ -42,7 +42,7 @@ body {
   font-size: 1.1rem;
 }
 
-.main {
+h1[class~=main] {
   text-align: center;
   margin: 3rem 5rem;
   padding: 6rem 0;
@@ -345,6 +345,7 @@ input[type=checkbox].toggle:disabled + label::after {
 .tutorial-list {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   list-style: none;
   background-color: var(--linear-gradient-clr1);
@@ -357,6 +358,22 @@ input[type=checkbox].toggle:disabled + label::after {
 .tutorial-list a:hover {
   background-color: #dadfc7;
   color: var(--linear-gradient-clr1);
+}
+
+/*Main page*/
+.animated-parent {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-color: #111;
+  display: grid;
+  margin: 0 auto;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
 }
 
 /*@media query*/
@@ -381,6 +398,9 @@ input[type=checkbox].toggle:disabled + label::after {
 @media screen and (max-width: 420px) {
   nav {
     display: none;
+  }
+  body {
+    font-size: 0.9rem;
   }
 }
 /*Light/dark mode*/
