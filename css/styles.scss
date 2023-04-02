@@ -381,14 +381,42 @@ input[type="checkbox"].toggle:disabled+label::after {
 
 /*Main page*/
 
-.animated-parent {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
-    background-color: #111;
+$transY: -70px;
+$circnum: 15;
+
+.snake {
     display: grid;
-    margin: 0 auto;
+    position: absolute;
+    gap: 1rem;
+    grid-template-columns: repeat($circnum, .5fr);
+    margin: 10rem auto;
+
+    .snake-particles {
+        width: 2rem;
+        position: relative;
+        height: 2rem;
+        border-radius: 100%;
+        background-color: #248c26;
+        animation: circle-animation 2s ease-in-out alternate infinite;
+    }
+
+    .snake-particles:nth-last-child(1) {
+        background-color: #111;
+    }
 }
+
+@keyframes circle-animation {
+    to {
+        transform: translateY($transY);
+    }
+}
+
+@for $i from 1 through $circnum {
+    .snake-particles:nth-child(#{$i}) {
+        animation-delay: calc(sin(15deg) * #{$i}s);
+    }
+}
+
 
 h1 {
     display: flex;
