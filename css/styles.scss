@@ -1,5 +1,9 @@
 /*Page style*/
 
+:root {
+    --linear-gradient: linear-gradient(#306283, #9aaae0);
+}
+
 body {
     background-color: var(--primary-color);
     margin: 0;
@@ -19,7 +23,7 @@ body {
 }
 
 .button-style {
-    background-image: linear-gradient(#306283, #9aaae0);
+    background-image: var(--linear-gradient);
     color: #dadfc7;
     font-weight: bold;
     text-align: center;
@@ -80,7 +84,7 @@ img {
 
 
 nav {
-    background-image: linear-gradient(#306283, #9aaae0);
+    background-image: var(--linear-gradient);
     min-width: fit-content;
     overflow: hidden;
     z-index: 1;
@@ -119,7 +123,7 @@ nav {
 }
 
 code {
-    background-image: linear-gradient(#306283, #8497d6);
+    background-image: var(--linear-gradient);
     border-radius: 3px;
     padding: 0.1rem;
     margin: 0.2rem;
@@ -382,38 +386,35 @@ input[type="checkbox"].toggle:disabled+label::after {
 /*Main page*/
 
 $transY: -70px;
-$circnum: 15;
+$circnum: 12;
 
-.snake {
+.animation-parent {
     display: grid;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     gap: 1rem;
     grid-template-columns: repeat($circnum, .5fr);
     margin: 10rem auto;
 
-    .snake-particles {
+    .animation-child {
         width: 2rem;
-        position: relative;
         height: 2rem;
         border-radius: 100%;
-        background-color: #248c26;
+        background-color: #111;
         animation: circle-animation 2s ease-in-out alternate infinite;
     }
+}
 
-    .snake-particles:nth-last-child(1) {
-        background-color: #111;
+@for $i from 1 through $circnum {
+    .animation-child:nth-child(#{$i}) {
+        animation-delay: calc(sin(15deg) * #{$i}s);
     }
 }
 
 @keyframes circle-animation {
     to {
         transform: translateY($transY);
-    }
-}
-
-@for $i from 1 through $circnum {
-    .snake-particles:nth-child(#{$i}) {
-        animation-delay: calc(sin(15deg) * #{$i}s);
     }
 }
 
