@@ -1,3 +1,143 @@
-body {
-    background-image: url("../space.png");
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+:root {
+    --primary-color: #ffff;
+}
+
+
+  body {
+    margin: 0;
+    color: var(--primary-color);
+    background-image: url("../svg/slika.jpg");  
+    background-repeat: no-repeat;   
+    background-size: cover;
+    padding: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    font-size: 1.4rem;
+    scroll-behavior: smooth;
+  }
+  
+  .drop-shadow {
+    filter: drop-shadow(0 0 0.2rem #111);
+  }
+  
+  .button-style {
+    background-image: var(--linear-gradient);
+    color: #dadfc7;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+  }
+  
+  .capital {
+    text-transform: capitalize;
+  }
+  
+  .hover {
+    height: 15rem;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .container {
+    padding: 22rem 0 2rem;
+    margin: 2rem 5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  h1[class~=main] {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 0;
+    padding: 6rem 0;
+  }
+
+  nav {
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+    margin-right: 5em;
+    margin-top: 1em;
+    width: 26%;
+    overflow: hidden;
+    z-index: 1;
+    margin-inline: 37%;
+  }
+    
+  nav ul 
+  {
+    position: sticky;
+  list-style: none;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  border: none;
+  }
+
+  nav ul li
+  {
+    display: inline-block;
+    border: none;
+  }
+  
+  nav ul li a 
+  {
+    border-radius: 50px;
+    border: none;
+    color: #dadfc7;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav ul li a:hover 
+  {
+    background-color: white;
+    color: #0e1e2e;
+  }
+
+  #settings {
+    color: white;
+    height: center;
+    float: right;
+    margin-top: 0.3em;
+    margin-right: 50px;
+  }
+  
+  #settings:hover {
+    cursor: pointer;
+    animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+  }
+  
+  #settings a {
+    text-decoration: none;
+    color: var(--primary-color);
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(180deg);
+    }
+  }
+
+h2 {
+    margin-bottom: 600px;
+}
+
+footer{
+    background-color: #0b1a2b;
+    height: 101px;
+    width: 100%;
 }
