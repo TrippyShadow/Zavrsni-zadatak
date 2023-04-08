@@ -367,8 +367,6 @@ input[type=checkbox].toggle:disabled + label::after {
 /*Main page*/
 .animation-parent {
   display: grid;
-  justify-content: center;
-  align-items: center;
   position: absolute;
   gap: 1rem;
   grid-template-columns: repeat(12, 0.5fr);
