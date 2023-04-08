@@ -15,11 +15,7 @@
   <nav class="sticky">
     <i style="font-size:24px" id="settings" class="fa"><a href="settings.html">&#xf013;</a></i>
     <ul>
-<<<<<<< HEAD
-      <li><a href="index.html">Homesdads</a></li>
-=======
       <li><a href="index.html">Home</a></li>
->>>>>>> upstream/master
       <li><a href="#">Contact</a></li>
       <li><a href="#">About us</a></li>
       <li><a href="tutorials.html">Tutorials</a></li>
@@ -46,12 +42,17 @@
   <section>
     <article class="transition">
       <h2 id="Transition" class="margin-title capital">What is transition?</h2>
-      <p class="margin"><code>CSS transitions</code> provide a way to control animation speed when changing CSS
-        properties.
-        Instead of having
+      <p class="margin">
+        <code>CSS transitions</code> provide a way to control animation speed when changing CSS properties. Instead of
+        having
         property changes take effect immediately, you can cause the changes in a property to take place over a period of
-        time. For example, if you change the color of an element from white to black, usually the change is
-        instantaneous. With CSS transitions enabled, changes occur at time intervals that follow an acceleration curve.
+        time.
+        For example, if you change the color of an element from white to black, usually the change is instantaneous.
+        With CSS transitions enabled,
+        changes occur at time intervals that follow an acceleration curve. But as you see on second hover button nothing
+        changed.
+        That is because <code>linear-gradient()</code> is not property that can be animated. Solution for that problem
+        is on later tutorial.
       </p>
       <button class="hover-button border-radius button-style">HOVER</button>
       <button class="hover-button background-color button-style">HOVER</button>
@@ -81,7 +82,10 @@
 
     <article>
       <h2 id="Transition-properties" class="capital">Transition properties</h2>
-      <p class="bottom-line"></p>
+      <p class="bottom-line">The <code>transition-property</code> sets the CSS properties to which a transition effect
+        should be applied. It specifies the name of the CSS property the transition effect is for. The transition effect
+        will start when the specified CSS property changes value. You can specify one or more CSS properties to apply
+        the transition effect to.</p>
     </article>
   </section>
 </body>
