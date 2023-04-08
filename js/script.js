@@ -1,27 +1,21 @@
-var check;
-if (check==true)
+const toggleCheckbox = document.getElementById('theme-toggle');
+const body = document.body;
 
-function isChecked()
-{  
-    if (document.getElementById("check1").checked)
-    {
-            document.body.classList.toggle("dark-theme");
-            theme = 'dark';
-            localStorage.setItem("check", true);
+//Vraca dark/light mode na pocetak
+const userPref = localStorage.getItem('theme');
 
-    }
-    if (document.getElementById("check1").checked == false){
-            document.body.classList.remove("dark-theme");
-            theme = 'light';
-            localStorage.setItem("check", false);
+if (userPref === 'dark') {
+  toggleCheckbox.checked = true;
+  body.classList.add('dark-mode');
 }
 
+toggleCheckbox.addEventListener('change', function() {
+  body.classList.toggle('dark-mode');
 
-localStorage.setItem("pageTheme", JSON.stringify(theme));
-}
-
-let getTheme = JSON.parse(localStorage.getItem("pageTheme"));
-
-if (getTheme === 'dark'){
-    document.body.classlist.toggle("dark-theme");
-}
+  // Cuva dark/light mode u local storage
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
