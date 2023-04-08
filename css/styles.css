@@ -49,6 +49,7 @@ h1[class~=main] {
   text-align: center;
   margin: 3rem 5rem;
   padding: 6rem 0;
+  font-size: 4rem;
 }
 
 .transition {
@@ -374,34 +375,6 @@ h1 {
   margin-top: 10rem;
 }
 
-/*@media query*/
-@media screen and (max-width: 1000px) {
-  .examples {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-@media screen and (max-width: 720px) {
-  body {
-    font-size: medium;
-  }
-  code {
-    font-size: large;
-  }
-  .examples {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-}
-@media screen and (max-width: 420px) {
-  nav {
-    display: none;
-  }
-  body {
-    font-size: 0.9rem;
-  }
-}
-
 :root {
   --primary-color: white;
   --secondary-color: rgb(48, 47, 47);
@@ -472,4 +445,40 @@ input[type="checkbox"]:checked::before {
 
 input[type="checkbox"]:hover{
   cursor: pointer;
+}
+
+/*@media query*/
+
+@media screen and (max-width: 1000px) {
+  .examples {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+  code {
+    font-size: large;
+  }
+
+  h1[class~='main'] {
+    font-size: 30px;
+  }
+
+  .examples {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 0.9rem;
+  }
 }
