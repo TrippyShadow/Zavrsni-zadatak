@@ -1,25 +1,21 @@
-var checkbox = document.querySelector('input[name=theme]');
+const toggleCheckbox = document.getElementById('theme-toggle');
+const body = document.body;
 
-checkbox.addEventListener('change', function() {
-    if(this.checked) {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'dark')
-    } else {
-        trans()
-        document.documentElement.setAttribute('data-theme', 'light')
-    }
-})
+//Vraca dark/light mode na pocetak
+const userPref = localStorage.getItem('theme');
 
-let trans = () => {
-    document.documentElement.classList.add('transition');
-    window.setTimeout(() => {
-        document.documentElement.classList.remove('transition')
-    }, 1000)
+if (userPref === 'dark') {
+  toggleCheckbox.checked = true;
+  body.classList.add('dark-mode');
 }
 
-if (document.getElementById("check1").checked)
-{
-        document.body.classList.toggle("dark-theme");
-}
-if (document.getElementById("check1").checked == false){
-        document.body.classList.remove("dark-theme");}
+toggleCheckbox.addEventListener('change', function() {
+  body.classList.toggle('dark-mode');
+
+  // Cuva dark/light mode u local storage
+  if (body.classList.contains('dark-mode')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+});
