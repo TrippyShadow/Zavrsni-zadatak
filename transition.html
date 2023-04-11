@@ -60,10 +60,12 @@
 
     <article>
       <h2 id="Transition-examples" class="margin-title">How can you use CSS transitions?</h2>
-      <p class="margin">To use CSS transitions, you must specify two things: the CSS property you want to add an effect
+      <p class="margin">
+        To use CSS transitions, you must specify two things: the CSS <code>property</code> you want to add an effect
         to and the
-        duration of the effect. If the duration part is not specified, the transition will have no effect because its
-        default value is 0.
+        <code>duration</code> of the effect. If the duration part is not specified, the transition will have no effect
+        because its
+        <code>default value is 0</code>.
 
         Here's an example that shows a div element with a transition on its width property:
       </p>
@@ -101,16 +103,39 @@
     <article>
       <h2 id="Transition-duration" class="margin-title">Transition duration</h2>
       <p class="margin">
-        <code>Transition-duration</code> is a CSS property that specifies the duration over which a CSS transition should occur. It
-        is usually defined in seconds (s) or milliseconds (ms).
+        <code>Transition-duration</code> is a CSS property that specifies the duration over which a CSS transition
+        should occur. This property takes a value in seconds (s) and milliseconds (ms).
       </p>
 
       <article class="bottom-line">
         <img src="svg/transition-duration.png" alt="Transition Properties" class="transition-example">
         <p>
-          Here you can see how to set transition duration to element.
+          Here you can see how we added <code>transition-duration</code> property to <code>text</code> element.
         </p>
       </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-timing-function" class="margin-title">Transition timing function</h2>
+      <p class="margin">
+        The <code>transition-timing-function</code> property in CSS specifies the speed curve of an element's transition over time.
+        It determines how intermediate values are calculated for a transition between two states, such as changing the
+        color or position of an element.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-timing-function.png" alt="Transition Properties" class="transition-example">
+        <p>
+          This <code>cubic-bezier()</code> curve creates a transition effect that starts slowly, speeds up quickly, and then slows down again at the end.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-delay" class="margin-title">Transition delay</h2>
+      <p class="margin">
+        <code>Transition-delay</code> is a CSS property that specifies the delay before a transition effect starts.
+      </p>
     </article>
   </section>
 </body>
