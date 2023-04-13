@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
 :root {
-    --primary-color: #ffff;
+  --primary-color: #ffff;
 }
+
 
 html{
   height: 100%;
@@ -134,7 +135,123 @@ html{
     to {
       transform: rotate(180deg);
     }
+    
+body {
+  margin: 0;
+  color: var(--primary-color);
+  background-image: url("../svg/slika.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  font-size: 1.4rem;
+  scroll-behavior: smooth;
+}
+
+.drop-shadow {
+  filter: drop-shadow(0 0 0.2rem #111);
+}
+
+.button-style {
+  background-image: var(--linear-gradient);
+  color: #dadfc7;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+}
+
+.capital {
+  text-transform: capitalize;
+}
+
+.hover {
+  height: 15rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.container {
+  padding: 22rem 0 2rem;
+  margin: 2rem 5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+h1[class~="main"] {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 0;
+  padding: 6rem 0;
+}
+
+.sticky {
+  position: sticky;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: .6em;
+}
+
+.sticky ul {
+  position: sticky;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+  border: none;
+}
+
+.sticky ul li {
+  display: inline-block;
+  border: none;
+}
+
+.sticky ul li a {
+  border-radius: 50px;
+  border: none;
+  color: #dadfc7;
+  display: block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.sticky ul li a:hover {
+  background-color: white;
+  color: #0e1e2e;
+}
+
+#settings {
+  color: white;
+}
+
+#settings:hover {
+  cursor: pointer;
+  animation: spin 0.4s ease-in-out 0.1s 1 normal none;
+}
+
+#settings a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(180deg);
+  }
+}
 
 #hamburger-menu {
   margin-top: .5em;
@@ -305,6 +422,25 @@ footer{
   }
 
   #footer-text {
+  margin-bottom: 8em;
+}
+
+footer {
+  background-color: #0b1a2b;
+  height: 101px;
+  width: 100%;
+}
+
+.margin {
+  margin-inline: 1em;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    font-size: medium;
+  }
+
+  .sticky ul li a {
     font-size: small;
   }
 }
@@ -317,5 +453,13 @@ footer{
   .wrapper {
     margin: 0;
     width: calc(100% - 2.5em);
+    
+@media screen and (max-width: 500px) {
+  .sticky {
+    display: none;
+  }
+
+  body {
+    font-size: small;
   }
 }

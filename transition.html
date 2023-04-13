@@ -22,7 +22,7 @@
     </ul>
   </nav>
 
-  <h1 class="main capital">CSS animation and transition tutorials</h1>
+  <h1 class="main">CSS animation and transition tutorials</h1>
 
   <div class="hover bottom-line">
     <p class="description center">Hover text below for little surprise!</p>
@@ -41,7 +41,7 @@
 
   <section>
     <article class="transition">
-      <h2 id="Transition" class="margin-title capital">What is transition?</h2>
+      <h2 id="Transition" class="margin-title ">What is transition?</h2>
       <p class="margin">
         <code>CSS transitions</code> provide a way to control animation speed when changing CSS properties. Instead of
         having
@@ -59,33 +59,83 @@
     </article>
 
     <article>
-      <h2 id="Transition-examples" class="margin-title capital">How can you use CSS transitions?</h2>
-      <p class="margin">To use CSS transitions, you must specify two things: the CSS property you want to add an effect
+      <h2 id="Transition-examples" class="margin-title">How can you use CSS transitions?</h2>
+      <p class="margin">
+        To use CSS transitions, you must specify two things: the CSS <code>property</code> you want to add an effect
         to and the
-        duration of the effect. If the duration part is not specified, the transition will have no effect because its
-        default value is 0.
+        <code>duration</code> of the effect. If the duration part is not specified, the transition will have no effect
+        because its
+        <code>default value is 0</code>.
 
-        Here's an example that shows a `div` element with a transition on its `width` property:
+        Here's an example that shows a div element with a transition on its width property:
       </p>
 
       <article class="bottom-line">
 
         <img src="svg/transition-example.png" alt="Transition Example" class="transition-example">
-        <p>Example:</p>
         <button class="example">Hover me</button>
 
         <p>
-          This code specifies that when a user hovers over the `div` element, its `width` property will transition from
-          `100px` to `300px` over a period of `2s` (2 seconds).</p>
+          This code specifies that when a user hovers over the div element, its width property will transition from
+          100px to 300px over a period of 2s (2 seconds). In line 5, you can see how we set
+          <code>transition-property(width)</code> and <code>transition-duration(2s)</code>.
+        </p>
       </article>
     </article>
 
     <article>
-      <h2 id="Transition-properties" class="capital">Transition properties</h2>
-      <p class="bottom-line">The <code>transition-property</code> sets the CSS properties to which a transition effect
+      <h2 id="Transition-properties" class="margin-title">Transition properties</h2>
+      <p class="margin">The <code>transition-property</code> sets the CSS properties to which a transition effect
         should be applied. It specifies the name of the CSS property the transition effect is for. The transition effect
         will start when the specified CSS property changes value. You can specify one or more CSS properties to apply
-        the transition effect to.</p>
+        the transition effect to.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-property.png" alt="Transition Properties" class="transition-example">
+        <p>
+          Here you can see how to set transition property to element. If you want
+          all properties to have transition effect, just set <code>transition-property: all;</code>.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-duration" class="margin-title">Transition duration</h2>
+      <p class="margin">
+        <code>Transition-duration</code> is a CSS property that specifies the duration over which a CSS transition
+        should occur. This property takes a value in seconds (s) and milliseconds (ms).
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-duration.png" alt="Transition Properties" class="transition-example">
+        <p>
+          Here you can see how we added <code>transition-duration</code> property to <code>text</code> element.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-timing-function" class="margin-title">Transition timing function</h2>
+      <p class="margin">
+        The <code>transition-timing-function</code> property in CSS specifies the speed curve of an element's transition over time.
+        It determines how intermediate values are calculated for a transition between two states, such as changing the
+        color or position of an element.
+      </p>
+
+      <article class="bottom-line">
+        <img src="svg/transition-timing-function.png" alt="Transition Properties" class="transition-example">
+        <p>
+          This <code>cubic-bezier()</code> curve creates a transition effect that starts slowly, speeds up quickly, and then slows down again at the end.
+        </p>
+      </article>
+    </article>
+
+    <article>
+      <h2 id="Transition-delay" class="margin-title">Transition delay</h2>
+      <p class="margin">
+        <code>Transition-delay</code> is a CSS property that specifies the delay before a transition effect starts.
+      </p>
     </article>
   </section>
 </body>

@@ -18,12 +18,17 @@ body {
   filter: drop-shadow(0 0 0.2rem #111);
 }
 
-.button-style {
+.button-style { 
   background-image: var(--linear-gradient);
   color: #dadfc7;
   font-weight: bold;
   text-align: center;
   border: none;
+}
+
+text {
+  transition-duration: 0.3s;
+  transition-duration: 500ms;
 }
 
 .capital {
